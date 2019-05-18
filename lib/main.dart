@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecom/pages/login-page.dart';
 import 'package:flutter_ecom/pages/register-page.dart';
 
 void main() => runApp(MyApp());
@@ -9,6 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
+        routes: {
+          '/login': (BuildContext context) => LoginPage(),
+          '/register': (BuildContext context) => RegisterPage()
+        },
         theme: ThemeData(
             brightness: Brightness.dark,
             primaryColor: Colors.cyan[400],
